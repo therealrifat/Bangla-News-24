@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "count": 9,
+  "cachedAt": "2026-10-04T04:20:51.194Z",
+  "data": [
+    {
+      "slug": "/bengali",
+      "title": "মূলপাতা",
+      "topicId": null,
+      "url": "https://www.bbc.com/bengali",
+      "scrapable": false
+    },
+    {
+      "slug": "politics",
+      "title": "রাজনীতি",
+      "topicId": "cqywj91rkg6t",
+      "url": "https://www.bbc.com/bengali/topics/cqywj91rkg6t",
+      "scrapable": true
+    },
+    {
+      "slug": "world",
+      "title": "বিশ্ব",
+      "topicId": "c907347rezkt",
+      "url": "https://www.bbc.com/bengali/topics/c907347rezkt",
+      "scrapable": true
+    },
+    {
+      "slug": "economy",
+      "title": "অর্থনীতি",
+      "topicId": "cjgn7233zk5t",
+      "url": "https://www.bbc.com/bengali/topics/cjgn7233zk5t",
+      "scrapable": true
+    },
+    {
+      "slug": "health",
+      "title": "স্বাস্থ্য",
+      "topicId": "cg7265yyxn1t",
+      "url": "https://www.bbc.com/bengali/topics/cg7265yyxn1t",
+      "scrapable": true
+    },
+    {
+      "slug": "sports",
+      "title": "খেলা",
+      "topicId": "cdr56g57y01t",
+      "url": "https://www.bbc.com/bengali/topics/cdr56g57y01t",
+      "scrapable": true
+    },
+    {
+      "slug": "technology",
+      "title": "প্রযুক্তি",
+      "topicId": "c8y94k95v52t",
+      "url": "https://www.bbc.com/bengali/topics/c8y94k95v52t",
+      "scrapable": true
+    },
+    {
+      "slug": "/bengali/popular/read",
+      "title": "সর্বাধিক পঠিত",
+      "topicId": null,
+      "url": "https://www.bbc.com/bengali/popular/read",
+      "scrapable": false
+    },
+    {
+      "slug": "video",
+      "title": "দেখুন",
+      "topicId": "cxy7jg418e7t",
+      "url": "https://www.bbc.com/bengali/topics/cxy7jg418e7t",
+      "scrapable": true
+    }
+  ]
+}
