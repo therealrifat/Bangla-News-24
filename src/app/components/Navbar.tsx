@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+
  interface ICategory {
       "slug": string,
       "title": string,
@@ -10,7 +11,7 @@ import Link from "next/link";
  }
 
 const getCategoris = async()=>{
-    const res = await fetch("http://localhost:3000/categories.json")
+    const res = await fetch("https://news-api-v2.vercel.app/api/categories")
     const data = await res.json()
     return data.data
   }
