@@ -1,13 +1,46 @@
+import Image from "next/image";
+import MarqueeTexts, { getHeadings, IHeading } from "./components/Marquee";
 
-import MarqueeTexts from './components/Marquee';
+export default async function Home() {
+  const headingData = await getHeadings();
 
-export default function Home() {
+  const [firstHeading, ...othersHeadings]: [
+    firstHeading: IHeading,
+    othersHeadings: IHeading,
+  ] = headingData.slice(0, 5);
+  // console.log(firstHeading); 
+  console.log(othersHeadings);
+
   return (
-    <div>
-      <MarqueeTexts/>
-      <p>This is home page </p>
+    <div className=" ">
+      <MarqueeTexts />
+      <div className="grid grid-cols-3 max-w-7xl mx-auto my-3 ">
+        <div className="grid grid-cols-2  h-auto col-span-2  ">
+          {/* first big card  */}
+          <div className=" col-span-1 h-105 rounded-lg overflow-hidden border border-gray-300 bg-gray-50 space-y-2 my-2 mx-2">
+            <Image
+              src={firstHeading.imageUrl}
+              alt={firstHeading.imageAlt}
+              width={450}
+              height={450}
+            />
+            <div className="px-5 text-left my-2">
+              <span className="text-sm">প্রধান খবর</span>
+              <h2 className=" text-xl">{firstHeading.title}</h2>
+              <p className=" text-sm">{firstHeading.description}</p>
+            </div>
+          </div>
+          {/* second text card */}
+          <div className=" col-span-1 h-105 rounded-sm border border-gray-300 bg-gray-50 space-y-2 my-2 mx-2">
+            {othersHeadings.map((item, ind) => <div key={ind} className=" border-b border-b-gray-400 p-1.5">
+              <span className="text-sm">প্রধান খবর</span>
+              
+              <h1>{item.title}</h1></div>)}
+          </div>
 
-      <p>রাজশাহীর পুঠিয়ায় একটি বিদ্যালয়ের মাঠে কলাগাছ রোপনের পাশাপাশি শিক্ষকদের কার্যালয়ে তালা দিয়েছেন ব্যবস্থাপনা কমিটির সাবেক একজন দাতা সদস্য। বিদ্যালয়ের প্রধান ফটকও বাঁশের বেড়া দিয়ে ঘিরে দিয়েছেন তিনি। পুত্রবধূকে চাকরি না দেওয়ায় এবং বিদ্যালয়ের নাম পরিবর্তন করায় তিনি এ কাজ করেছেন বলে জানিয়েছেন। যদিও পূত্রবধূকে চাকরি দেওয়া হয়েছে বলে জানিয়েছেন প্রধান শিক্ষক।</p>
+        </div>
+        <div className=" bg-yellow-600  h-100"></div>
+      </div>
     </div>
   );
 }

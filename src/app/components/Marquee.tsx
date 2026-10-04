@@ -1,8 +1,8 @@
 
 import MarqueeText from 'react-marquee-text';
 
-const getHeadings = async()=>{
-    const res = await fetch("https://news-api-v2.vercel.app/api/news")
+export  const getHeadings = async()=>{
+    const res = await fetch("http://localhost:3000/latesthadline.json")
     const data = await res.json()
     return data.data
 }
@@ -28,11 +28,13 @@ const MarqueeTexts = async() => {
     // console.log(topTenHeadings)
 
     return (
-        <div className='bg-red-700 py-2 text-white flex justify-center items-center'>
-            <p className=' bg-red-900 '>সর্বশেষ</p>
-            
-            <MarqueeText className=' max-w-7xl mx-auto' duration={10} direction='right' > {topTenHeadings.map((item :IHeading, ind: number) => <span key={ind}>{item.title} <span className=' mx-2'>●</span> </span>)}</MarqueeText>
+        <div className='bg-red-700 ' >
+            <div className=' flex max-w-7xl mx-auto items-center text-white'>
+            <p className=' bg-red-900 py-2 px-2'>সর্বশেষ</p>
+            <MarqueeText className='' duration={10} direction='right' > {topTenHeadings.map((item :IHeading, ind: number) => <span key={ind}>{item.title} <span className=' mx-2'>●</span> </span>)}</MarqueeText>
         </div>
+        </div>
+        
     );
 };
 

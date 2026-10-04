@@ -11,7 +11,7 @@ import Link from "next/link";
  }
 
 const getCategoris = async()=>{
-    const res = await fetch("https://news-api-v2.vercel.app/api/categories")
+    const res = await fetch("http://localhost:3000/categories.json")
     const data = await res.json()
     return data.data
   }
