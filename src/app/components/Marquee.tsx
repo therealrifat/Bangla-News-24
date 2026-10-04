@@ -2,7 +2,7 @@
 import MarqueeText from 'react-marquee-text';
 
 export  const getHeadings = async()=>{
-    const res = await fetch("http://localhost:3000/latesthadline.json")
+    const res = await fetch("https://news-api-v2.vercel.app/api/news")
     const data = await res.json()
     return data.data
 }

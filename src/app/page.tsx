@@ -1,5 +1,6 @@
 import Image from "next/image";
 import MarqueeTexts, { getHeadings, IHeading } from "./components/Marquee";
+import MostRead from "./components/MostRead";
 
 export default async function Home() {
   const headingData = await getHeadings();
@@ -14,10 +15,10 @@ export default async function Home() {
   return (
     <div className=" ">
       <MarqueeTexts />
-      <div className="grid grid-cols-3 max-w-7xl mx-auto my-3 ">
-        <div className="grid grid-cols-2  h-auto col-span-2  ">
+      <div className="grid grid-cols-3 gap-3 max-w-7xl mx-auto my-3 ">
+        <div className="grid grid-cols-2  h-auto col-span-2   ">
           {/* first big card  */}
-          <div className=" col-span-1 h-105 rounded-lg overflow-hidden border border-gray-300 bg-gray-50 space-y-2 my-2 mx-2">
+          <div className=" col-span-1 h-105 rounded-lg overflow-hidden border border-gray-300 bg-gray-50 space-y-2 my-2  mx-2">
             <Image
               src={firstHeading.imageUrl}
               alt={firstHeading.imageAlt}
@@ -37,9 +38,13 @@ export default async function Home() {
               
               <h1>{item.title}</h1></div>)}
           </div>
+        </div>
+        <div className=" grid-cols-1 border rounded-sm border-gray-300 h-auto my-2">
+          <MostRead/> 
+
 
         </div>
-        <div className=" bg-yellow-600  h-100"></div>
+
       </div>
     </div>
   );
