@@ -27,7 +27,7 @@ const MostRead = async() => {
     const mostRead = await getMostRead()
     return (
         <div className='p-2'>
-            <p className='font-bold text-lg '>সর্বাধিক পঠিত</p>
+            <p className='font-bold text-lg '>Most Readed</p>
             {mostRead.map((item: IMostRead , ind: number) => <div key={ind} className='flex gap-2'><span >{ind+1}</span> <h1 className='text-lg'> {` ${item.title}`}</h1></div> )}
         </div>
     );
