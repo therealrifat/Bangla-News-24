@@ -33,8 +33,10 @@ export default async function Home() {
   const othersHeadings = othersHeading.slice(0, 4);
 
   const selectedNews = allData[1];
-  const selectedNewsArticle = selectedNews.articles
-  console.log(selectedNewsArticle);
+
+
+  const bangladeshNews = allData[3]
+
 
   return (
     <div className=" ">
@@ -87,12 +89,21 @@ export default async function Home() {
               {selectedNews.articles.map((itemNews:ISeletedNews, ind: number)=><NewsCard key={ind} itemNews={itemNews} category={selectedNews.title} />)}
               </div>
           </div>
+          
+          {/* bangladesh news section */}
+          <div className=" mt-10">
+            <h2 className=" font-bold py-5">{bangladeshNews.title}</h2>
+            <hr className="text-red-500 mb-5"></hr>
+            <div className="grid grid-cols-3 gap-5">
+              {bangladeshNews.articles.map((itemNews:ISeletedNews, ind: number)=><NewsCard key={ind} itemNews={itemNews} category={bangladeshNews.title} />)}
+              </div>
+          </div>
 
           
         </div>
         
         
-        <div className=" grid-cols-1 border rounded-sm border-gray-300 h-auto my-2">
+        <div className=" grid-cols-1 border rounded-sm border-gray-300 h-150 my-2">
           <MostRead />
         </div>
       </div>

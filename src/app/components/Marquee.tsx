@@ -28,7 +28,7 @@ const MarqueeTexts = async() => {
     // console.log(topTenHeadings)
 
     return (
-        <div className='bg-red-700 sticky top-0' >
+        <div className='bg-red-700 sticky top-0 z-50' >
             <div className=' flex max-w-7xl mx-auto items-center text-white'>
             <p className=' bg-red-900 py-2 px-2'>সর্বশেষ</p>
             <MarqueeText className='' duration={10} direction='right' > {topTenHeadings.map((item :IHeading, ind: number) => <span key={ind}>{item.title} <span className=' mx-2'>●</span> </span>)}</MarqueeText>
