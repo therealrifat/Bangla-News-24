@@ -16,7 +16,7 @@ const NewsCard = ({ itemNews, category }: INewsCard) => {
         src={itemNews.imageUrl}
         width={100}
         height={100}
-        alt={itemNews.imageAlt}
+        alt={itemNews.title}
         className="w-67.25 h-40 object-center transition-transform duration-300 ease-in-out group-hover:scale-115  "
       />
       </div>

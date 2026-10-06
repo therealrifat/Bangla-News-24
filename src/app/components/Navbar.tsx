@@ -42,7 +42,8 @@ const Navbar = async() => {
       </div>
       <div className="flex text-center">
         <ul className="flex gap-3 items-center justify-center text-sm ">
-          {categoies.map((item: ICategory, i:number)=><li key={i}><Link href='/'>{item.title}</Link></li>)}
+          <li><Link href="/">হোম</Link> </li>
+          {categoies.map((item: ICategory, i:number)=><li key={i}><Link href={`/category/${item.slug}`}>{item.title}</Link></li>)}
         </ul>
       </div>
     </nav>
