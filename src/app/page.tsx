@@ -33,10 +33,12 @@ export default async function Home() {
   const othersHeadings = othersHeading.slice(0, 4);
 
   const selectedNews = allData[1];
-
-
   const bangladeshNews = allData[3]
+  const indiaNews =allData[5]
+  const worldNews =allData[6]
+  // console.log(allData)
 
+ 
 
   return (
     <div className=" ">
@@ -89,7 +91,7 @@ export default async function Home() {
               {selectedNews.articles.map((itemNews:ISeletedNews, ind: number)=><NewsCard key={ind} itemNews={itemNews} category={selectedNews.title} />)}
               </div>
           </div>
-          
+
           {/* bangladesh news section */}
           <div className=" mt-10">
             <h2 className=" font-bold py-5">{bangladeshNews.title}</h2>
@@ -98,6 +100,30 @@ export default async function Home() {
               {bangladeshNews.articles.map((itemNews:ISeletedNews, ind: number)=><NewsCard key={ind} itemNews={itemNews} category={bangladeshNews.title} />)}
               </div>
           </div>
+
+          {/* Indian News section  */}
+
+          <div className=" mt-10">
+            <h2 className=" font-bold py-5">{indiaNews.title}</h2>
+            <hr className="text-red-500 mb-5"></hr>
+            <div className="grid grid-cols-3 gap-5">
+              {indiaNews.articles.map((itemNews:ISeletedNews, ind: number)=><NewsCard key={ind} itemNews={itemNews} category={indiaNews.title} />)}
+              </div>
+          </div>
+
+          {/* world news section  */}
+
+          <div className=" mt-10">
+            <h2 className=" font-bold py-5">{worldNews.title}</h2>
+            <hr className="text-red-500 mb-5"></hr>
+            <div className="grid grid-cols-3 gap-5">
+              {worldNews.articles.map((itemNews:ISeletedNews, ind: number)=><NewsCard key={ind} itemNews={itemNews} category={worldNews.title} />)}
+              </div>
+          </div>
+
+
+
+
 
           
         </div>

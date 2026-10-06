@@ -10,7 +10,7 @@ interface INewsCard {
 const NewsCard = ({ itemNews, category }: INewsCard) => {
   return (
     <Link href={itemNews.link}>
-      <div className=" group h-70 border border-gray-300 mt-2 rounded-xl overflow-hidden">
+      <div className=" group h-75 border border-gray-300 mt-2 rounded-xl overflow-hidden">
       <div className=" overflow-hidden">
         <Image
         src={itemNews.imageUrl}
