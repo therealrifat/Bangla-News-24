@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-const CategoryNews = async ({params}) => {
+const CategoryNews = async ({params}:{params:{category:string}} ) => {
     const {category}=await params
     const res = await fetch(`https://news-api-v2.vercel.app/api/category/${category}`)
     const data = await res.json()
