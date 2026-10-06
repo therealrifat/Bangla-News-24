@@ -64,7 +64,7 @@ export default async function Home() {
               <div className="px-5 text-left my-2">
                 <span className="text-sm">প্রধান খবর</span>
                 <h2 className=" text-xl">{firstHeading.title}</h2>
-                <p className=" text-sm">{firstHeading.description}</p>
+                <p className=" text-sm line-clamp-2">{firstHeading.description}</p>
               </div>
             </div>
 

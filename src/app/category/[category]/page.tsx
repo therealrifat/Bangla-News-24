@@ -8,7 +8,7 @@ const CategoryNews = async ({params}:{params:{category:string}} ) => {
     const res = await fetch(`https://news-api-v2.vercel.app/api/category/${category}`)
     const data = await res.json()
     const categoryNews =data.data
-    console.log(categoryNews)
+    // console.log(categoryNews)
 
 
     return (
@@ -22,7 +22,7 @@ const CategoryNews = async ({params}:{params:{category:string}} ) => {
 
                 {categoryNews.map((itemNews:ISeletedNews, i: number)=> 
                 <div key={i}>
-                    <Link href="/">
+                    <Link href={`/news/${itemNews.id}`}>
                     <div className=" group h-90 border border-gray-300 mt-2 rounded-xl overflow-hidden">
                           <div className=" overflow-hidden">
                             <Image
