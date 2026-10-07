@@ -31,7 +31,7 @@ export default async function Home() {
   const allData = await getHomePageNews();
   const [firstHeading, ...othersHeading] = allData[0].articles;
   const othersHeadings = othersHeading.slice(0, 4);
-  console.log(othersHeading, "other rifat")
+
 
   const selectedNews = allData[1];
   const bangladeshNews = allData[3];
@@ -40,7 +40,7 @@ export default async function Home() {
   const healthNews = allData[7];
   const videoNews = allData[8];
   const othersNews = allData[9];
-  console.log(allData);
+
 
   return (
     <div className=" ">

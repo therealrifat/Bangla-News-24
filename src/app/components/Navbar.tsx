@@ -18,6 +18,7 @@ const getCategoris = async()=>{
   }
 
 const Navbar = async() => {
+
   const categore = await getCategoris()
   const categoies =categore.filter((n: ICategory)=> n.scrapable)
 
@@ -25,6 +26,8 @@ const Navbar = async() => {
   const today = new Date().toLocaleDateString("bn-BD", {
     dateStyle: "full",
   });
+
+
 
   
   return (
@@ -37,8 +40,17 @@ const Navbar = async() => {
         </div>
 
         <div className="flex gap-2  absolute -right-110">
-          <button><Link href='/'>সাইন ইন</Link></button>
-          <button className=" px-2 py-1 bg-red-600 text-white rounded-sm"><Link href='/'>সাইন আপ</Link></button>
+
+          {
+
+          }
+          {/* <button className=" px-2 py-1 bg-red-600 text-white rounded-sm"><Link href='/sign-up'>সাইন আউট </Link></button> */}
+          {/* <div>
+            <button><Link href='/sign-in'>সাইন ইন</Link></button>
+            <button className=" px-2 py-1 bg-red-600 text-white rounded-sm"><Link href='/sign-up'>সাইন আপ</Link></button>
+
+          </div> */}
+          
         </div>
       </div>
       <div className="flex text-center">
