@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 export interface IMostRead {
@@ -28,7 +29,7 @@ const MostRead = async() => {
     return (
         <div className='p-2'>
             <p className='font-bold text-lg '>সর্বাধিক পঠিত</p>
-            {mostRead.map((item: IMostRead , ind: number) => <div key={ind} className='flex gap-2'><span >{ind+1}</span> <h1 className='text-lg'> {` ${item.title}`}</h1></div> )}
+            {mostRead.map((item: IMostRead , ind: number) => <Link key={ind} href={`/news/${item.id}`}> <div  className='flex gap-2'><span >{ind+1}</span><h1 className='text-lg'> {` ${item.title}`}</h1></div></Link> )}
         </div>
     );
 };
